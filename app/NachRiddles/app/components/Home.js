@@ -64,6 +64,12 @@ export default class HomeScreen extends Component {
     })
   }
 
+  reset() {
+    this.props.navigation.state.params.riddles(
+      this.state.count - this.state.count
+    )
+  }
+
   render() {
     let width = Dimensions.get('window').width
     let font = width / 10
@@ -127,10 +133,7 @@ export default class HomeScreen extends Component {
               <View>
                 <TouchableOpacity
                   style={styles.button}
-                  onPress={() =>
-                    this.props.navigation.state.params.riddles(
-                      this.state.count - this.state.count
-                    )}
+                  onPress={() => this.reset()}
                 >
                   <Text
                     style={{
