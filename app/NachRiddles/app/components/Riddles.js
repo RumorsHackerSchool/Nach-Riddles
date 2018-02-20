@@ -40,7 +40,7 @@ export default class Riddles extends Component {
   }
 
   componentWillMount() {
-    if (this.props.navigation.state.params.resetCount===0){
+    if (this.props.navigation.state.params.resetCount === 0) {
       AsyncStorage.getItem('count')
         .then(value => {
           this.setState({ count: 0 })
@@ -52,20 +52,21 @@ export default class Riddles extends Component {
         })
         .done()
     } else {
-    AsyncStorage.getItem('count')
-      .then(value => {
-        this.setState({ count: JSON.parse(value) || 0 })
-      })
-      .done()
-    AsyncStorage.getItem('diamonds')
-      .then(value => {
-        this.setState({ diamonds: JSON.parse(value) || 0 })
-      })
-      .done()
-    axios
-      .get('https://zwerd.com/NachRiddles/database/riddles-testing-file.html')
-      .then(response => this.setState({ urldatabase: response.data }))
-  }}
+      AsyncStorage.getItem('count')
+        .then(value => {
+          this.setState({ count: JSON.parse(value) || 0 })
+        })
+        .done()
+      AsyncStorage.getItem('diamonds')
+        .then(value => {
+          this.setState({ diamonds: JSON.parse(value) || 0 })
+        })
+        .done()
+      axios
+        .get('https://zwerd.com/NachRiddles/database/riddles-testing-file.html')
+        .then(response => this.setState({ urldatabase: response.data }))
+    }
+  }
   saveData() {
     AsyncStorage.setItem('count', String(this.state.count))
     AsyncStorage.setItem('diamonds', String(this.state.diamonds))
@@ -123,6 +124,9 @@ export default class Riddles extends Component {
   }
 
   checkAnswer(answer) {
+    var levenshtein = require('fast-levenshtein')
+    var distance = levenshtein.get(this.state.userAnswer, answer)
+    console.log('check the distance = ', distance)
     if (this.state.userAnswer === answer) {
       this.refs.modalCorrect.open()
     } else if (this.state.userAnswer === '') {
@@ -412,7 +416,7 @@ export default class Riddles extends Component {
           </View>
         </Image>
       </View>
-    );
+    )
   }
 }
 
