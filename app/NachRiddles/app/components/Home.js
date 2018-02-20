@@ -91,7 +91,7 @@ export default class HomeScreen extends Component {
                   fontFamily: 'stam1',
                   textAlign: 'center',
                   color: '#2196F3',
-                  fontSize: font
+                  fontSize: 80
                 }}
               >
                 אביעה חידות מני קדם
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
     fontFamily: 'stam1',
     textAlign: 'center',
     color: '#2196F3',
-    fontSize: 60
+    flex: 120
   },
   lineText: {
     fontFamily: 'nrkis',
