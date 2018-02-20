@@ -10,13 +10,12 @@ import {
   ScrollView,
   Dimensions
 } from 'react-native'
-import { StackNavigator } from 'react-navigation';
+import { StackNavigator } from 'react-navigation'
 
 export default class HomeScreen extends Component {
   static navigationOptions = {
     header: null
   }
-
 
   constructor(props) {
     super(props)
@@ -137,16 +136,11 @@ export default class HomeScreen extends Component {
               <View>
                 <TouchableOpacity
                   style={styles.button}
-<<<<<<< HEAD
                   onPress={() => this.reset()}
-=======
-                  onPress={() => navigate('Riddles',  { resetCount: this.state.resetCount })}
->>>>>>> 3247ef6bbe3e5a3f2ddc5990262d2838b3005c35
+                  onPress={() =>
+                    navigate('Riddles', { resetCount: this.state.resetCount })}
                 >
-                  <Text style={styles.buttonText}
-                  >
-                    איפוס
-                  </Text>
+                  <Text style={styles.buttonText}>איפוס</Text>
                 </TouchableOpacity>
               </View>
             </View>
