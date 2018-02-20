@@ -40,10 +40,18 @@ export default class Riddles extends Component {
   }
 
   componentWillMount() {
-    console.log('onChilde')
-    this.props.navigation.navigate('Home', {
-      riddles: this.restartGame.bind(this)
-    })
+    if (this.props.navigation.state.params.resetCount===0){
+      AsyncStorage.getItem('count')
+        .then(value => {
+          this.setState({ count: 0 })
+        })
+        .done()
+      AsyncStorage.getItem('diamonds')
+        .then(value => {
+          this.setState({ diamonds: 0 })
+        })
+        .done()
+    } else {
     AsyncStorage.getItem('count')
       .then(value => {
         this.setState({ count: JSON.parse(value) || 0 })
@@ -57,7 +65,7 @@ export default class Riddles extends Component {
     axios
       .get('https://zwerd.com/NachRiddles/database/riddles-testing-file.html')
       .then(response => this.setState({ urldatabase: response.data }))
-  }
+  }}
   saveData() {
     AsyncStorage.setItem('count', String(this.state.count))
     AsyncStorage.setItem('diamonds', String(this.state.diamonds))
@@ -139,17 +147,6 @@ export default class Riddles extends Component {
     this.props.navigation.state.params.home(this.state.count + 1)
     this.refs.modalCorrect.close()
     this.saveData()
-  }
-
-  restartGame(newCount) {
-    this.setState({
-      userAnswer: '',
-      count: newCount,
-      diamonds: 0,
-      urldatabase: {},
-      wordsnumber: 0,
-      riddleletter: ''
-    })
   }
 
   render() {
@@ -402,7 +399,7 @@ export default class Riddles extends Component {
                   style={styles.button}
                   onPress={() => this.clearAnswer(answer)}
                 >
-                  <Text style={styles.buttonText}>תקן</Text>
+                  <Text style={styles.buttonText}>מחק</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   style={styles.button}
@@ -411,27 +408,11 @@ export default class Riddles extends Component {
                   <Text style={styles.buttonText}>בדוק</Text>
                 </TouchableOpacity>
               </View>
-              <View>
-                <TouchableOpacity
-                  style={styles.button}
-                  onPress={() => this.restartGame()}
-                >
-                  <Text
-                    style={{
-                      textAlign: 'center',
-                      justifyContent: 'center',
-                      color: 'white'
-                    }}
-                  >
-                    אפס משחק
-                  </Text>
-                </TouchableOpacity>
-              </View>
             </ScrollView>
           </View>
         </Image>
       </View>
-    )
+    );
   }
 }
 

@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.nachriddles"
-    android:versionCode="102"
-    android:versionName="1.02">
+    android:versionCode="103"
+    android:versionName="1.03">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" tools:node="remove" />
     <uses-permission android:name="android.permission.INTERNET" />
