@@ -37,9 +37,9 @@ export default class HomeScreen extends Component {
     }
   }
 
-  onChangeCount(newCount) {
+  onChangeCount(count) {
     this.setState({
-      count: newCount
+      count: this.state.count + count
     })
   }
 
@@ -105,7 +105,7 @@ export default class HomeScreen extends Component {
                 <TouchableOpacity
                   onPress={() =>
                     this.props.navigation.navigate('Riddles', {
-                      home: this.onChangeCount.bind(this)
+                      onChangeCount: this.onChangeCount.bind(this)
                     })}
                 >
                   <View style={styles.button}>

@@ -22,6 +22,7 @@ import {
 import database from '../database/riddle-the-new-json'
 import Modal from 'react-native-modalbox'
 import axios from 'axios'
+import { StackNavigator } from 'react-navigation'
 
 export default class Riddles extends Component {
   static navigationOptions = {
@@ -148,7 +149,8 @@ export default class Riddles extends Component {
       count: this.state.count + 1,
       diamonds: this.state.diamonds + 5
     })
-    this.props.navigation.state.params.home(this.state.count + 1)
+    const { navigate } = this.props.navigation
+    this.props.navigation.state.params.onChangeCount(1)
     this.refs.modalCorrect.close()
     this.saveData()
   }
