@@ -42,6 +42,14 @@ export default class Riddles extends Component {
 
   componentWillMount() {
     if (this.props.navigation.state.params.resetCount === 0) {
+      console.log(this.props.navigation.state.params.resetCount)
+      console.log(
+        'check state value ',
+        this.state.count,
+        this.state.diamonds,
+        this.state.wordsnumber,
+        this.state.riddleletter
+      )
       AsyncStorage.getItem('count')
         .then(value => {
           this.setState({ count: 0 })
@@ -150,7 +158,9 @@ export default class Riddles extends Component {
       diamonds: this.state.diamonds + 5
     })
     const { navigate } = this.props.navigation
-    this.props.navigation.state.params.onChangeCount(1)
+    console.log(navigate)
+    this.props.navigation.state.params.home(this.state.count + 1)
+    console.log(navigate)
     this.refs.modalCorrect.close()
     this.saveData()
   }

@@ -37,9 +37,9 @@ export default class HomeScreen extends Component {
     }
   }
 
-  onChangeCount(count) {
+  onChangeCount(newCount) {
     this.setState({
-      count: this.state.count + count
+      count: newCount
     })
   }
 
@@ -66,12 +66,6 @@ export default class HomeScreen extends Component {
     })
   }
 
-  reset() {
-    this.props.navigation.state.params.riddles(
-      this.state.count - this.state.count
-    )
-  }
-
   render() {
     const { navigate } = this.props.navigation
     let width = Dimensions.get('window').width
@@ -85,63 +79,72 @@ export default class HomeScreen extends Component {
             source={require('../img/opening-img2.jpg')}
           >
             <View style={styles.backdropView}>
-              <Text
-                style={{
-                  paddingTop: 20,
-                  fontFamily: 'stam1',
-                  textAlign: 'center',
-                  color: '#2196F3',
-                  fontSize: 80
-                }}
-              >
-                אביעה חידות מני קדם
-              </Text>
-              <Image
-                style={{ width: 360, height: 165, resizeMode: 'stretch' }}
-                source={require('../img/Book.png')}
-              />
-              <Text style={styles.lineText}>1188 חידות על הנביא</Text>
-              <View style={styles.buttonView}>
-                <TouchableOpacity
-                  onPress={() =>
-                    this.props.navigation.navigate('Riddles', {
-                      onChangeCount: this.onChangeCount.bind(this)
-                    })}
+              <View style={{ flex: 4 }}>
+                <Text
+                  style={{
+                    paddingTop: 20,
+                    fontFamily: 'stam1',
+                    textAlign: 'center',
+                    color: '#2196F3',
+                    fontSize: 80
+                  }}
                 >
-                  <View style={styles.button}>
-                    <Text style={styles.buttonText}>
-                      {this.checkBeginning()}
-                    </Text>
-                  </View>
-                </TouchableOpacity>
+                  אביעה חידות מני קדם
+                </Text>
               </View>
-              <View style={styles.buttonView}>
-                <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('Introduction')}
-                >
-                  <View style={styles.button}>
-                    <Text style={styles.buttonText}>הוראות</Text>
-                  </View>
-                </TouchableOpacity>
+              <View style={{ flex: 2 }}>
+                <Image
+                  style={{ width: 360, height: 165, resizeMode: 'stretch' }}
+                  source={require('../img/Book.png')}
+                />
+                <Text style={styles.lineText}>1188 חידות על הנביא</Text>
               </View>
-              <View style={styles.buttonView}>
-                <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('About')}
-                >
-                  <View style={styles.button}>
-                    <Text style={styles.buttonText}>אודות</Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
-              <View>
-                <TouchableOpacity
-                  style={styles.button}
-                  onPress={() => this.reset()}
-                  onPress={() =>
-                    navigate('Riddles', { resetCount: this.state.resetCount })}
-                >
-                  <Text style={styles.buttonText}>איפוס</Text>
-                </TouchableOpacity>
+              <View style={{ flex: 2 }}>
+                <View style={styles.buttonView}>
+                  <TouchableOpacity
+                    onPress={() =>
+                      this.props.navigation.navigate('Riddles', {
+                        home: this.onChangeCount.bind(this)
+                      })}
+                  >
+                    <View style={styles.button}>
+                      <Text style={styles.buttonText}>
+                        {this.checkBeginning()}
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+                <View style={styles.buttonView}>
+                  <TouchableOpacity
+                    onPress={() =>
+                      this.props.navigation.navigate('Introduction')}
+                  >
+                    <View style={styles.button}>
+                      <Text style={styles.buttonText}>הוראות</Text>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+                <View style={styles.buttonView}>
+                  <TouchableOpacity
+                    onPress={() => this.props.navigation.navigate('About')}
+                  >
+                    <View style={styles.button}>
+                      <Text style={styles.buttonText}>אודות</Text>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+                <View>
+                  <TouchableOpacity
+                    style={styles.button}
+                    onPress={() =>
+                      this.props.navigation.navigate('Riddles', {
+                        home: this.onChangeCount.bind(this),
+                        resetCount: this.state.resetCount
+                      })}
+                  >
+                    <Text style={styles.buttonText}>איפוס</Text>
+                  </TouchableOpacity>
+                </View>
               </View>
             </View>
           </Image>
@@ -171,8 +174,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     fontFamily: 'stam1',
     textAlign: 'center',
-    color: '#2196F3',
-    flex: 120
+    color: '#2196F3'
   },
   lineText: {
     fontFamily: 'nrkis',
