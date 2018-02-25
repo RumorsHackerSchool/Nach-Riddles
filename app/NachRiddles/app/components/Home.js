@@ -70,7 +70,7 @@ export default class HomeScreen extends Component {
     const { navigate } = this.props.navigation
     let width = Dimensions.get('window').width
     let font = width / 10
-    console.log(font)
+    console.log('this is the font -', font, 'and this is the width ', width)
     return (
       <ScrollView>
         <View style={styles.container}>
@@ -86,7 +86,7 @@ export default class HomeScreen extends Component {
                     fontFamily: 'stam1',
                     textAlign: 'center',
                     color: '#2196F3',
-                    fontSize: 80
+                    fontSize: font * 1.5
                   }}
                 >
                   אביעה חידות מני קדם
@@ -94,7 +94,11 @@ export default class HomeScreen extends Component {
               </View>
               <View style={{ flex: 2 }}>
                 <Image
-                  style={{ width: 360, height: 165, resizeMode: 'stretch' }}
+                  style={{
+                    width: width,
+                    height: width / 2,
+                    resizeMode: 'stretch'
+                  }}
                   source={require('../img/Book.png')}
                 />
                 <Text style={styles.lineText}>1188 חידות על הנביא</Text>
