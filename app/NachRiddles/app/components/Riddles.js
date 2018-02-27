@@ -42,14 +42,6 @@ export default class Riddles extends Component {
 
   componentWillMount() {
     if (this.props.navigation.state.params.resetCount === 0) {
-      console.log(this.props.navigation.state.params.resetCount)
-      console.log(
-        'check state value ',
-        this.state.count,
-        this.state.diamonds,
-        this.state.wordsnumber,
-        this.state.riddleletter
-      )
       AsyncStorage.getItem('count')
         .then(value => {
           this.setState({ count: 0 })
@@ -136,8 +128,12 @@ export default class Riddles extends Component {
     var levenshtein = require('fast-levenshtein')
     var distance = levenshtein.get(this.state.userAnswer, answer)
     console.log('check the distance = ', distance)
-    if (this.state.userAnswer === answer) {
-      this.refs.modalCorrect.open()
+    if (distance <= 2) {
+      if (distance === 0) {
+        this.refs.modalCorrect.open()
+      } else if (distance <= 2) {
+        this.refs.modalExact.open()
+      }
     } else if (this.state.userAnswer === '') {
       this.refs.modalNone.open()
     } else {
@@ -151,17 +147,19 @@ export default class Riddles extends Component {
     })
   }
 
-  nextQuestion() {
+  nextQuestion(x) {
     this.setState({
       userAnswer: '',
       count: this.state.count + 1,
       diamonds: this.state.diamonds + 5
     })
     const { navigate } = this.props.navigation
-    console.log(navigate)
     this.props.navigation.state.params.home(this.state.count + 1)
-    console.log(navigate)
-    this.refs.modalCorrect.close()
+    if (x === 1) {
+      this.refs.modalExact.close()
+    } else {
+      this.refs.modalCorrect.close()
+    }
     this.saveData()
   }
 
@@ -209,6 +207,29 @@ export default class Riddles extends Component {
               <TouchableOpacity
                 style={styles.modalButtonAnswer}
                 onPress={() => this.nextQuestion()}
+              >
+                <Text
+                  style={{ fontFamily: 'nrkis', fontSize: 22, color: 'white' }}
+                >
+                  אישור
+                </Text>
+              </TouchableOpacity>
+            </Modal>
+
+            <Modal
+              style={[styles.modal, styles.modalCorrect]}
+              position={'center'}
+              ref={'modalExact'}
+            >
+              <Text style={styles.modalText}>תשובה נכונה!</Text>
+              <Text
+                style={{ fontFamily: 'nrkis', fontSize: 22, color: 'white' }}
+              >
+                תשובה מדוייקת: "{answer}"
+              </Text>
+              <TouchableOpacity
+                style={styles.modalButtonAnswer}
+                onPress={() => this.nextQuestion(1)}
               >
                 <Text
                   style={{ fontFamily: 'nrkis', fontSize: 22, color: 'white' }}
