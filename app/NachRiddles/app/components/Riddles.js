@@ -373,7 +373,9 @@ export default class Riddles extends Component {
               <RiddleHeader headerText={book} />
               <View style={styles.viewFlex}>
                 <View style={{ flex: 1, flexDirection: 'row' }}>
-                  <RiddleSectionsHeader2 headerText={riddle_section} />
+                  <TouchableOpacity style={{ flex: 2, flexDirection: 'row' }}>
+                    <RiddleSectionsHeader2 headerText={riddle_section} />
+                  </TouchableOpacity>
                   <RiddleSectionsHeader1 headerText={parallel} />
                   <RiddleSectionsHeader1
                     headerText={'חידה מספר\n' + riddle_number}

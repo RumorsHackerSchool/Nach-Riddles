@@ -1,22 +1,11 @@
 import React, { Component } from 'react'
-import { Text, View, TouchableOpacity } from 'react-native'
-import Modal from 'react-native-modalbox'
+import { Text, View } from 'react-native'
 
 class RiddleSectionsHeader2 extends Component {
-  parallel() {
-    this.refs.modalParallel.open()
-  }
   render() {
     return (
       <View style={styles.viewStyle}>
-        <Modal
-          style={[styles.modal, styles.modalParallel]}
-          position={'center'}
-          ref={'modalParallel'}
-        />
-        <TouchableOpacity onPress={() => this.parallel()}>
-          <Text style={styles.textStyle}>{this.props.headerText}</Text>
-        </TouchableOpacity>
+        <Text style={styles.textStyle}>{this.props.headerText}</Text>
       </View>
     )
   }
@@ -39,18 +28,6 @@ const styles = {
     textAlign: 'center',
     fontSize: 15,
     color: 'white'
-  },
-  modal: {
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  modalParallel: {
-    backgroundColor: '#2196F3',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 3,
-    borderRadius: 10,
-    height: 200
   }
 }
 
