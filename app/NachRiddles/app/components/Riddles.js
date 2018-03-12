@@ -20,6 +20,7 @@ import {
   RiddleBox
 } from './common'
 import database from '../database/riddle-the-new-json'
+
 import Modal from 'react-native-modalbox'
 import axios from 'axios'
 import { StackNavigator } from 'react-navigation'
@@ -71,6 +72,14 @@ export default class Riddles extends Component {
   saveData() {
     AsyncStorage.setItem('count', String(this.state.count))
     AsyncStorage.setItem('diamonds', String(this.state.diamonds))
+  }
+
+  parasha(riddle_section, riddle_number) {
+    console.log(this.state.count)
+    this.props.navigation.navigate('Parasha', {
+      parasha: Math.floor(this.state.count / 22),
+      parasha_name: { riddle_section }
+    })
   }
 
   clue(words_number, riddle_letter) {
@@ -153,6 +162,12 @@ export default class Riddles extends Component {
       count: this.state.count + 1,
       diamonds: this.state.diamonds + 5
     })
+    console.log(
+      'Math.floor(this.state.count / 22)',
+      Math.floor(this.state.count / 22),
+      this.state.count / 22,
+      this.state.count
+    )
     const { navigate } = this.props.navigation
     this.props.navigation.state.params.home(this.state.count + 1)
     if (x === 1) {
@@ -172,6 +187,7 @@ export default class Riddles extends Component {
     let num = this.state.count
     let jsondata = this.state.urldatabase[num]
     let diamonds = this.state.diamonds
+    let parasha
     console.log(this.state.count)
     const book = database[num].book
     const riddle_section = database[num].riddle_section
@@ -373,7 +389,10 @@ export default class Riddles extends Component {
               <RiddleHeader headerText={book} />
               <View style={styles.viewFlex}>
                 <View style={{ flex: 1, flexDirection: 'row' }}>
-                  <TouchableOpacity style={{ flex: 2, flexDirection: 'row' }}>
+                  <TouchableOpacity
+                    style={{ flex: 2, flexDirection: 'row' }}
+                    onPress={() => this.parasha(riddle_section, riddle_number)}
+                  >
                     <RiddleSectionsHeader2 headerText={riddle_section} />
                   </TouchableOpacity>
                   <RiddleSectionsHeader1 headerText={parallel} />
