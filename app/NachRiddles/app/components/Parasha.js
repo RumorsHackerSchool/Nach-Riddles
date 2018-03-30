@@ -20,23 +20,22 @@ export default class Parasha extends Component {
     console.log('in the parasha component', parasha_number)
     console.log('parasha name', parasha_name)
     return (
-      <ScrollView contentContainerStyle={styles.contentContainer}>
-        <View style={{ height: 60, backgroundColor: '#2196F3' }}>
-          <Text style={styles.titleText}>{parasha_name.riddle_section}</Text>
-        </View>
-        <View style={styles.container}>
-          <Image
-            style={styles.imageStyle}
-            source={require('../img/riddle.jpg')}
-          >
-            <View style={styles.backdropView}>
+      <View style={styles.container}>
+        <Image style={styles.imageStyle} source={require('../img/riddle.jpg')}>
+          <View style={styles.backdropView}>
+            <View style={{ height: 60, backgroundColor: '#2196F3' }}>
+              <Text style={styles.titleText}>
+                {parasha_name.riddle_section}
+              </Text>
+            </View>
+            <ScrollView>
               <Text style={styles.lineText}>
                 {parasha[parasha_number].parasha}
               </Text>
-            </View>
-          </Image>
-        </View>
-      </ScrollView>
+            </ScrollView>
+          </View>
+        </Image>
+      </View>
     )
   }
 }

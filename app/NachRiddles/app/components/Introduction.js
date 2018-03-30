@@ -12,16 +12,13 @@ import {
 export default class Introduction extends Component {
   render() {
     return (
-      <ScrollView contentContainerStyle={styles.contentContainer}>
-        <View style={{ height: 60, backgroundColor: '#2196F3' }}>
-          <Text style={styles.titleText}>הוראות</Text>
-        </View>
-        <View style={styles.container}>
-          <Image
-            style={styles.imageStyle}
-            source={require('../img/riddle.jpg')}
-          >
-            <View style={styles.backdropView}>
+      <View style={styles.container}>
+        <Image style={styles.imageStyle} source={require('../img/riddle.jpg')}>
+          <View style={styles.backdropView}>
+            <View style={{ height: 60, backgroundColor: '#2196F3' }}>
+              <Text style={styles.titleText}>הוראות</Text>
+            </View>
+            <ScrollView contentContainerStyle={styles.contentContainer}>
               <Text style={styles.lineText}>
                 ברוכים הבאים למשחק "אביע חידות מני קדם"
                 {'\n'}
@@ -53,10 +50,11 @@ export default class Introduction extends Component {
                 בכותרת של מסך החידה מצויין שם הספר בנ''ך עליו מבוסס החידון,
                 לדוגמא:
                 {'\n'}
-                <Image
-                  style={styles.ImageLine}
-                  source={require('../img/book_for_riddle.png')}
-                />
+              </Text>
+              <View>
+                <Image source={require('../img/book_for_riddle.png')} />
+              </View>
+              <Text style={styles.lineText}>
                 {'\n'}
                 {'\n'}
                 מתחת לכותרת מצויינים נתוני החידון הבאים:
@@ -68,10 +66,11 @@ export default class Introduction extends Component {
                 3. שם החידון.
                 {'\n'}
                 {'\n'}
-                <Image
-                  style={styles.ImageLine}
-                  source={require('../img/listA.png')}
-                />
+              </Text>
+              <View>
+                <Image source={require('../img/listA.png')} />
+              </View>
+              <Text style={styles.lineText}>
                 {'\n'}
                 {'\n'}
                 {'\n'}
@@ -101,10 +100,11 @@ export default class Introduction extends Component {
                 3. מספר יהלומים.
                 {'\n'}
                 {'\n'}
-                <Image
-                  style={styles.ImageLine}
-                  source={require('../img/listB.png')}
-                />
+              </Text>
+              <View>
+                <Image source={require('../img/listB.png')} />
+              </View>
+              <Text style={styles.lineText}>
                 {'\n'}
                 {'\n'}
                 הוראות - בלחיצה על כפתור זה יפתח חלון אשר יציג את דף הוראות זה.
@@ -129,19 +129,21 @@ export default class Introduction extends Component {
                 מתחת לטבלת הכלים תופיע החידה, מענה נכון על החידה תעביר אתכם
                 לחידה הבאה.
                 {'\n'}
-                <Image
-                  style={styles.ImageLine}
-                  source={require('../img/DaRiddle.png')}
-                />
+              </Text>
+              <View>
+                <Image source={require('../img/DaRiddle.png')} />
+              </View>
+              <Text style={styles.lineText}>
                 {'\n'}
                 {'\n'}
                 מתחת החידה תופיע מגילת התשובה עליה יש להקיש את התשובה.
                 {'\n'}
                 {'\n'}
-                <Image
-                  style={styles.ImageLine}
-                  source={require('../img/DaAnswer.png')}
-                />
+              </Text>
+              <View>
+                <Image source={require('../img/DaAnswer.png')} />
+              </View>
+              <Text style={styles.lineText}>
                 {'\n'}
                 {'\n'}
                 מתחת למגילת התשובה יופיעו שני כפתורים:
@@ -151,10 +153,11 @@ export default class Introduction extends Component {
                 2. נקה - מסיר את הפתרון שהוכנס במגילת התשובה.
                 {'\n'}
                 {'\n'}
-                <Image
-                  style={styles.ImageLine}
-                  source={require('../img/buttons.png')}
-                />
+              </Text>
+              <View>
+                <Image source={require('../img/buttons.png')} />
+              </View>
+              <Text style={styles.lineText}>
                 {'\n'}
                 {'\n'}
                 {'\n'}
@@ -199,10 +202,10 @@ export default class Introduction extends Component {
                 {'\n'}
                 {'\n'}
               </Text>
-            </View>
-          </Image>
-        </View>
-      </ScrollView>
+            </ScrollView>
+          </View>
+        </Image>
+      </View>
     )
   }
 }
