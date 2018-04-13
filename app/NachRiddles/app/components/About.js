@@ -129,12 +129,12 @@ export default class About extends Component {
                 הדוא"ל הנ"ל ולציין בכותרת "אביעה חידות מני קדם".
                 {'\n'}
               </Text>
+              <Text style={styles.lineText2}>{'\n'}</Text>
+              <Image
+                style={styles.imageStyle2}
+                source={require('../img/the_original_book.png')}
+              />
               <Text style={styles.lineText2}>
-                {'\n'}
-                <Image
-                  style={styles.imageStyle2}
-                  source={require('../img/the_original_book.png')}
-                />
                 {'\n'}
                 {'\n'}
                 {'\n'}
@@ -143,11 +143,11 @@ export default class About extends Component {
               </Text>
               <TouchableOpacity
                 onPress={() => {
-                  Linking.openURL('https://zwerd.com/NachRiddles')
+                  Linking.openURL('http://zwerd.com/NachRiddles')
                 }}
               >
                 <Text style={styles.lineLink}>
-                  https://zwerd.com/NachRiddles
+                  http://zwerd.com/NachRiddles
                 </Text>
               </TouchableOpacity>
             </ScrollView>
