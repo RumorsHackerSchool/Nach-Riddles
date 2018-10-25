@@ -1,0 +1,486 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _class,
+    _temp,
+    _jsxFileName = '/home/guy/Gits/Nach-Riddles/app/NachRiddles/index.android.js',
+    _class2,
+    _temp2,
+    _class3,
+    _temp3,
+    _class4,
+    _temp4,
+    _class5,
+    _temp5;
+
+var _reactNative = require('react-native');
+
+var _reactNavigation = require('react-navigation');
+
+var _ComponentBookSelector = require('./app/components/ComponentBookSelector');
+
+var _ComponentBookSelector2 = _interopRequireDefault(_ComponentBookSelector);
+
+var _index3 = require('./index.android');
+
+var _index4 = _interopRequireDefault(_index3);
+
+var _ComponentLevels = require('./app/components/ComponentLevels');
+
+var _ComponentLevels2 = _interopRequireDefault(_ComponentLevels);
+
+var _ComponentAbout = require('./app/components/ComponentAbout');
+
+var _ComponentAbout2 = _interopRequireDefault(_ComponentAbout);
+
+var _ComponentRiddles = require('./app/components/ComponentRiddles');
+
+var _ComponentRiddles2 = _interopRequireDefault(_ComponentRiddles);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  HomeScreen: {
+    displayName: 'HomeScreen'
+  },
+  BookSelectorScreen: {
+    displayName: 'BookSelectorScreen'
+  },
+  LevelsScreen: {
+    displayName: 'LevelsScreen'
+  },
+  AboutScreen: {
+    displayName: 'AboutScreen'
+  },
+  SettingScreen: {
+    displayName: 'SettingScreen'
+  }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: '/home/guy/Gits/Nach-Riddles/app/NachRiddles/index.android.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var HomeScreen = _wrapComponent('HomeScreen')((_temp = _class = function (_React$Component) {
+  _inherits(HomeScreen, _React$Component);
+
+  function HomeScreen() {
+    _classCallCheck(this, HomeScreen);
+
+    return _possibleConstructorReturn(this, (HomeScreen.__proto__ || Object.getPrototypeOf(HomeScreen)).apply(this, arguments));
+  }
+
+  _createClass(HomeScreen, [{
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react3.default.createElement(
+        _reactNative.View,
+        { style: styles.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24
+          }
+        },
+        _react3.default.createElement(
+          _reactNative.View,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 25
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.titleText, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 26
+              }
+            },
+            '\u05D0\u05D1\u05D9\u05E2\u05D4 \u05D7\u05D9\u05D3\u05D5\u05EA \u05DE\u05E0\u05D9 \u05E7\u05D3\u05DD'
+          ),
+          _react3.default.createElement(
+            _reactNative.View,
+            { style: styles.imageViewer, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 27
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.View,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 28
+                }
+              },
+              _react3.default.createElement(_reactNative.Image, { style: { width: 360, height: 165 }, source: require("./app/img/Book.png"), __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 29
+                }
+              })
+            )
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: { height: 50 }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 33
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.lineText, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 34
+              }
+            },
+            '\u05D1\u05E8\u05D5\u05DB\u05D9\u05DD \u05D4\u05D1\u05D0\u05D9\u05DD \u05DC\u05DE\u05E9\u05D7\u05E7 \u05D7\u05D9\u05D3\u05D5\u05EA \u05D4\u05E0\'\'\u05DA'
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { onPress: function onPress() {
+              return _this2.props.navigation.navigate('BookSelector');
+            }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 37
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.View,
+            { style: styles.button, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 38
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              { style: styles.buttonText, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 39
+                }
+              },
+              '\u05D4\u05EA\u05D7\u05DC'
+            )
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { onPress: function onPress() {
+              return _this2.props.navigation.navigate('Levels');
+            }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 43
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.View,
+            { style: styles.button, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 44
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              { style: styles.buttonText, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 45
+                }
+              },
+              '\u05E9\u05DC\u05D1\u05D9\u05DD'
+            )
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { onPress: function onPress() {
+              return _this2.props.navigation.navigate('Setting');
+            }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 49
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.View,
+            { style: styles.button, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 50
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              { style: styles.buttonText, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 51
+                }
+              },
+              '\u05D4\u05D2\u05D3\u05E8\u05D5\u05EA'
+            )
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.TouchableOpacity,
+          { onPress: function onPress() {
+              return _this2.props.navigation.navigate('About');
+            }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 55
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.View,
+            { style: styles.button, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 56
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              { style: styles.buttonText, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 57
+                }
+              },
+              '\u05D0\u05D5\u05D3\u05D5\u05EA'
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return HomeScreen;
+}(_react3.default.Component), _class.navigationOptions = {
+  header: null
+}, _temp));
+
+exports.default = HomeScreen;
+
+var BookSelectorScreen = _wrapComponent('BookSelectorScreen')((_temp2 = _class2 = function (_React$Component2) {
+  _inherits(BookSelectorScreen, _React$Component2);
+
+  function BookSelectorScreen() {
+    _classCallCheck(this, BookSelectorScreen);
+
+    return _possibleConstructorReturn(this, (BookSelectorScreen.__proto__ || Object.getPrototypeOf(BookSelectorScreen)).apply(this, arguments));
+  }
+
+  _createClass(BookSelectorScreen, [{
+    key: 'render',
+    value: function render() {
+      return _react3.default.createElement(
+        _reactNative.View,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 71
+          }
+        },
+        _react3.default.createElement(_ComponentBookSelector2.default, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 72
+          }
+        })
+      );
+    }
+  }]);
+
+  return BookSelectorScreen;
+}(_react3.default.Component), _class2.navigationOptions = {
+  title: 'אביעה חידות מני קדם'
+}, _temp2));
+
+var LevelsScreen = _wrapComponent('LevelsScreen')((_temp3 = _class3 = function (_React$Component3) {
+  _inherits(LevelsScreen, _React$Component3);
+
+  function LevelsScreen() {
+    _classCallCheck(this, LevelsScreen);
+
+    return _possibleConstructorReturn(this, (LevelsScreen.__proto__ || Object.getPrototypeOf(LevelsScreen)).apply(this, arguments));
+  }
+
+  _createClass(LevelsScreen, [{
+    key: 'render',
+    value: function render() {
+      return _react3.default.createElement(
+        _reactNative.View,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 84
+          }
+        },
+        _react3.default.createElement(_ComponentLevels2.default, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 85
+          }
+        })
+      );
+    }
+  }]);
+
+  return LevelsScreen;
+}(_react3.default.Component), _class3.navigationOptions = {
+  title: 'אביעה חידות מני קדם'
+}, _temp3));
+
+var AboutScreen = _wrapComponent('AboutScreen')((_temp4 = _class4 = function (_React$Component4) {
+  _inherits(AboutScreen, _React$Component4);
+
+  function AboutScreen() {
+    _classCallCheck(this, AboutScreen);
+
+    return _possibleConstructorReturn(this, (AboutScreen.__proto__ || Object.getPrototypeOf(AboutScreen)).apply(this, arguments));
+  }
+
+  _createClass(AboutScreen, [{
+    key: 'render',
+    value: function render() {
+      return _react3.default.createElement(
+        _reactNative.View,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 97
+          }
+        },
+        _react3.default.createElement(_ComponentAbout2.default, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 98
+          }
+        })
+      );
+    }
+  }]);
+
+  return AboutScreen;
+}(_react3.default.Component), _class4.navigationOptions = {
+  title: 'אביעה חידות מני קדם'
+}, _temp4));
+
+var SettingScreen = _wrapComponent('SettingScreen')((_temp5 = _class5 = function (_React$Component5) {
+  _inherits(SettingScreen, _React$Component5);
+
+  function SettingScreen() {
+    _classCallCheck(this, SettingScreen);
+
+    return _possibleConstructorReturn(this, (SettingScreen.__proto__ || Object.getPrototypeOf(SettingScreen)).apply(this, arguments));
+  }
+
+  _createClass(SettingScreen, [{
+    key: 'render',
+    value: function render() {
+      return _react3.default.createElement(
+        _reactNative.View,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 111
+          }
+        },
+        _react3.default.createElement(ComponentSetting, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 112
+          }
+        })
+      );
+    }
+  }]);
+
+  return SettingScreen;
+}(_react3.default.Component), _class5.navigationOptions = {
+  title: 'אביעה חידות מני קדם'
+}, _temp5));
+
+var NachRiddles = (0, _reactNavigation.StackNavigator)({
+  Home: { screen: HomeScreen },
+  BookSelector: { screen: BookSelectorScreen },
+  Levels: { screen: LevelsScreen },
+  Setting: { screen: SettingScreen },
+  About: { screen: AboutScreen }
+}, { headerMode: 'screen' });
+
+
+var styles = _reactNative.StyleSheet.create({
+  container: {
+    height: 570,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'white'
+  },
+
+  titleText: {
+    color: '#2196F3',
+    fontWeight: 'bold',
+    fontSize: 50,
+    textAlign: 'center'
+
+  },
+  imageViewer: {
+    height: 160,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  lineText: {
+    color: '#2196F3',
+    fontWeight: 'bold',
+    fontSize: 20,
+    textAlign: 'center'
+  },
+  buttonView: {
+    textAlign: 'center',
+    width: 170,
+    height: 45
+  },
+  button: {
+    marginBottom: 5,
+    width: 200,
+    height: 45,
+    alignItems: 'center',
+    backgroundColor: '#2196F3'
+  },
+  buttonText: {
+    fontSize: 30,
+    padding: 1,
+    color: 'black',
+    fontWeight: 'bold',
+    backgroundColor: 'rgba(0,0,0,0)'
+  }
+
+});
+
+_reactNative.AppRegistry.registerComponent('NachRiddles', function () {
+  return NachRiddles;
+});

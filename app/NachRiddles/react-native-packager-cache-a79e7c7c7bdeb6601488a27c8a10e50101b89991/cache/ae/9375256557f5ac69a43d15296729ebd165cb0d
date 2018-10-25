@@ -1,0 +1,212 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./../../node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _jsxFileName = '/home/guy/Gits/Nach-Riddles/app/NachRiddles/app/components/ComponentLevels.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _reactNative = require('react-native');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  ComponentLevels: {
+    displayName: 'ComponentLevels'
+  }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: '/home/guy/Gits/Nach-Riddles/app/NachRiddles/app/components/ComponentLevels.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var ComponentLevels = _wrapComponent('ComponentLevels')(function (_Component) {
+  _inherits(ComponentLevels, _Component);
+
+  function ComponentLevels() {
+    _classCallCheck(this, ComponentLevels);
+
+    return _possibleConstructorReturn(this, (ComponentLevels.__proto__ || Object.getPrototypeOf(ComponentLevels)).apply(this, arguments));
+  }
+
+  _createClass(ComponentLevels, [{
+    key: 'render',
+    value: function render() {
+      return _react3.default.createElement(
+        _reactNative.View,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 8
+          }
+        },
+        _react3.default.createElement(
+          _reactNative.View,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 9
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.titleText, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 10
+              }
+            },
+            '\u05E9\u05DC\u05D1\u05D9\u05DD'
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: styles.buttonView, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 13
+            }
+          },
+          _react3.default.createElement(_reactNative.Button, {
+            onPress: this.changeColor,
+            title: '\u05E1\u05E4\u05E8 \u05D9\u05D4\u05D5\u05E9\u05E2',
+            color: 'skyblue',
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 14
+            }
+          })
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: styles.buttonView, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 20
+            }
+          },
+          _react3.default.createElement(_reactNative.Button, {
+            onPress: this.changeColor,
+            title: '\u05E1\u05E4\u05E8 \u05E9\u05D5\u05E4\u05D8\u05D9\u05DD',
+            color: '#D3D3D3',
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 21
+            }
+          })
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: styles.buttonView, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 27
+            }
+          },
+          _react3.default.createElement(_reactNative.Button, {
+            onPress: this.changeColor,
+            title: '\u05E1\u05E4\u05E8 \u05E9\u05DE\u05D5\u05D0\u05DC',
+            color: '#D3D3D3',
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 28
+            }
+          })
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: styles.buttonView, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 34
+            }
+          },
+          _react3.default.createElement(_reactNative.Button, {
+            onPress: this.changeColor,
+            title: '\u05E1\u05E4\u05E8 \u05DE\u05DC\u05DB\u05D9\u05DD',
+            color: '#D3D3D3',
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 35
+            }
+          })
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: styles.buttonView, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 41
+            }
+          },
+          _react3.default.createElement(_reactNative.Button, {
+            onPress: this.changeColor,
+            title: '\u05E1\u05E4\u05E8 \u05D3\u05E0\u05D9\u05D0\u05DC',
+            color: '#D3D3D3',
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 42
+            }
+          })
+        )
+      );
+    }
+  }]);
+
+  return ComponentLevels;
+}(_react2.Component));
+
+exports.default = ComponentLevels;
+
+
+var styles = _reactNative.StyleSheet.create({
+  container: {
+    height: 600,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'powderblue'
+  },
+  titleView: {
+    height: 10,
+    width: 360,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'steelblue'
+  },
+  titleText: {
+    height: 60,
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 45,
+    textAlign: 'center',
+    backgroundColor: 'steelblue'
+  },
+  buttonView: {
+    textAlign: 'center',
+    justifyContent: 'center',
+    height: 45,
+    width: 360
+
+  }
+});
+
+_reactNative.AppRegistry.registerComponent('ComponentLevels', function () {
+  return ComponentLevels;
+});

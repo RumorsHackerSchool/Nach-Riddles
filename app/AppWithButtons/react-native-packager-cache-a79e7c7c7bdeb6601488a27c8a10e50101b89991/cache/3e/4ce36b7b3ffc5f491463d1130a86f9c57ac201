@@ -1,0 +1,183 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./../../node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _jsxFileName = '/home/guy/Gits/Nach-Riddles/app/NachRiddles/app/components/ComponentRiddles.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _reactNative = require('react-native');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  ComponentRiddles: {
+    displayName: 'ComponentRiddles'
+  }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: '/home/guy/Gits/Nach-Riddles/app/NachRiddles/app/components/ComponentRiddles.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var ComponentRiddles = _wrapComponent('ComponentRiddles')(function (_Component) {
+  _inherits(ComponentRiddles, _Component);
+
+  function ComponentRiddles() {
+    _classCallCheck(this, ComponentRiddles);
+
+    return _possibleConstructorReturn(this, (ComponentRiddles.__proto__ || Object.getPrototypeOf(ComponentRiddles)).apply(this, arguments));
+  }
+
+  _createClass(ComponentRiddles, [{
+    key: 'render',
+    value: function render() {
+      return _react3.default.createElement(
+        _reactNative.View,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 7
+          }
+        },
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: { flex: 1, flexDirection: 'row' }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 8
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.titleText, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 9
+              }
+            },
+            '\u05DE\u05E7\u05D1\u05D9\u05DC\u05D4 \u05DC-\u05D1\u05E8\u05D0\u05E9\u05D9\u05EA'
+          ),
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.titleText, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 10
+              }
+            },
+            '\u05E4\u05E8\u05E9\u05EA \u05D9\u05D4\u05D5\u05E9\u05E2'
+          ),
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.titleText, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 11
+              }
+            },
+            '\u05E1\u05E4\u05E8 \u05D9\u05D4\u05D5\u05E9\u05E2'
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: styles.container, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 13
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.titleText2, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 14
+              }
+            },
+            '\u05D7\u05D9\u05D3\u05D4 \u05D0'
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 16
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.titleText3, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 17
+              }
+            },
+            '\u05D0\u05EA \u05DE\u05D4 \u05E0\u05E9\u05D0\u05D5 \u05D4\u05DB\u05D4\u05E0\u05D9\u05DD \u05DB\u05E9\u05D1\u05EA\u05D5\u05DA \u05D4\u05D9\u05E8\u05D3\u05DF \u05D4\u05D9\u05D5 \u05E2\u05D5\u05DE\u05D3\u05D9\u05DD'
+          )
+        )
+      );
+    }
+  }]);
+
+  return ComponentRiddles;
+}(_react2.Component));
+
+exports.default = ComponentRiddles;
+
+
+var styles = _reactNative.StyleSheet.create({
+  container: {
+    height: 125,
+    width: 360,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  titleText: {
+    height: 45,
+    width: 120,
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 15,
+    textAlign: 'center',
+    backgroundColor: 'steelblue'
+  },
+  titleText2: {
+    height: 45,
+    width: 360,
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 32,
+    textAlign: 'center',
+    backgroundColor: 'skyblue'
+  },
+  titleText3: {
+    height: 45,
+    width: 360,
+    color: '#000',
+    fontWeight: 'bold',
+    fontSize: 15,
+    textAlign: 'center'
+  }
+});
+
+_reactNative.AppRegistry.registerComponent('ComponentRiddles', function () {
+  return ComponentRiddles;
+});
